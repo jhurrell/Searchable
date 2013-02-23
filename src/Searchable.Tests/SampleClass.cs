@@ -18,6 +18,22 @@
 		public string StringProperty { get; set; }
 		public bool BoolProperty { get; set; }
 
+		// Nullable value types.
+		public byte? NullableByteProperty { get; set; }
+		public sbyte? NullableSbtyeProperty { get; set; }
+		public int? NullableShortProperty { get; set; }
+		public ushort? NullableUshortProperty { get; set; }
+		public int? NullableIntProperty { get; set; }
+		public uint? NullableUintProperty { get; set; }
+		public long? NullableLongProperty { get; set; }
+		public ulong? NullableUlongProperty { get; set; }
+		public float? NullableFloatProperty { get; set; }
+		public double? NullableDoubleProperty { get; set; }
+		public decimal? NullableDecimalProperty { get; set; }
+		public char? NullableCharProperty { get; set; }
+		public bool? NullableBoolProperty { get; set; }
+
+		// Unsupported types.
 		private string PrivateProperty { get; set; }
 	}
 }

@@ -54,7 +54,7 @@ namespace SearchableTests
 			}
 
 			[TestMethod]
-			public void Type()
+			public void Type_Is_PropertyInfo()
 			{
 				Assert.AreEqual(PropertyInfo.PropertyType, typeof(PropertyInfo));
 			}
@@ -86,7 +86,7 @@ namespace SearchableTests
 			}
 
 			[TestMethod]
-			public void Type()
+			public void Type_Is_String()
 			{
 				Assert.AreEqual(PropertyInfo.PropertyType, typeof(string));
 			}

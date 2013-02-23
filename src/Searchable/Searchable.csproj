@@ -39,6 +39,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="SearchableProperty.cs" />
     <Compile Include="SearchConditions\Condition.cs" />
     <Compile Include="Operators\Operators.cs" />
     <Compile Include="SearchConditions\IsTrueSearchCondition.cs" />

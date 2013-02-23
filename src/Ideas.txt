@@ -29,8 +29,8 @@ var searchable = new Searchable<Person>();
 // the constructor and are either defaults or those specifically included/excluded
 // at design time.
 searchable.Properties = IEnumerable<Property???>
-searchable.Properties["FirstName"].Operators = IEnumerable<Operators>
-searchable.Properties["FirstName"]["Equals"].Values = IEnumerable<object>
+searchable["FirstName"].Operators = IEnumerable<Operators>
+searchable["FirstName"]["Equals"].Values = IEnumerable<object>
 
 searchable.Conditions = IEnumerable<Condition>
 searchable.AddCondition(string propertyName, string operatorName, params values)
