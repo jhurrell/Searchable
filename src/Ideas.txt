@@ -1,0 +1,63 @@
+public class Searchable<Person>
+{
+	public Searchable()
+	{
+		CanSearch(x => x.FirstName);
+
+		CanSearch(x => x.LastName)
+			.Exclude(Operators.Contains)
+			.Exclude(Operators.EndWith);
+
+		CanSearch(x => x.DateOfBirth)
+			.Include(Operators.GreaterThan);
+
+		CanSearch(x => x.SSN)
+			.DisplayAs("Social Security Number");
+
+		// If the property being searched is IEnumerable, we can specify a source class
+		// object which can supply a list of selectable values and provide them to the UI.
+		// In this example, ColorSource is a class which implements the ISource interface. 
+		// This interface includes the method called GetSources() which returns IDictionary<string, string>
+		CanSearch(x => x.FavoriteColors)
+			.Source(ColorSources);
+	}
+}
+
+var searchable = new Searchable<Person>();
+
+// The available properties to be searched plus the operators supported are defined in
+// the constructor and are either defaults or those specifically included/excluded
+// at design time.
+searchable.Properties = IEnumerable<Property???>
+searchable.Properties["FirstName"].Operators = IEnumerable<Operators>
+searchable.Properties["FirstName"]["Equals"].Values = IEnumerable<object>
+
+searchable.Conditions = IEnumerable<Condition>
+searchable.AddCondition(string propertyName, string operatorName, params values)
+searchable.AddCondition(string propertyName, string operatorName, object[] values)
+searchable.AddCondition(string propertyName, Operators operator, params values)
+searchable.AddCondition(string propertyName, Operators operator, object[] values)
+
+                        Bol   Num   Dat   Str   Col
+IsTrue                  X
+IsFalse                 X
+HasValue                X     X     X     X  
+DoesNotHaveValue        X     X     X     X
+Equals                        X     X     X
+DoesNotEqual                  X     X     X
+GreaterThan                   X     X     X
+LessThan                      X     X     X
+GreaterThanOrEqualTo          X     X     X
+LessThanOrEqualTo             X     X     X
+IsOneOf                       X     X     X     
+IsNotOneOf                    X     X     X
+Between                       X     X     X
+BeginsWith                                X
+EndsWith                                  X
+Contains                                  X 
+DoesNotContain                            X
+IsEmpty                                         X
+IsNotEmpty                                      X
+ContainsOneOf                                   X
+ContainsNoneOf                                  X
+ContainsAllOf                                   X    

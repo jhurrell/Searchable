@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Searchable", "Searchable\Searchable.csproj", "{C563D331-36BF-4728-BFB1-634B15F8FDCC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SearchableTests", "SearchableTests\SearchableTests.csproj", "{80FBC693-8F01-4A70-B8E7-CF024BE6AA25}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Files", "Solution Files", "{DC7203EA-5C6C-488A-B7E8-4CD9A244E9E3}"
+	ProjectSection(SolutionItems) = preProject
+		Ideas.txt = Ideas.txt
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C563D331-36BF-4728-BFB1-634B15F8FDCC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C563D331-36BF-4728-BFB1-634B15F8FDCC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C563D331-36BF-4728-BFB1-634B15F8FDCC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C563D331-36BF-4728-BFB1-634B15F8FDCC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{80FBC693-8F01-4A70-B8E7-CF024BE6AA25}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{80FBC693-8F01-4A70-B8E7-CF024BE6AA25}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{80FBC693-8F01-4A70-B8E7-CF024BE6AA25}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{80FBC693-8F01-4A70-B8E7-CF024BE6AA25}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
