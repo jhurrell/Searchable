@@ -3,11 +3,14 @@ using System.Collections.Generic;
 
 namespace Searchable.Operators
 {
-	public class OperatorSupport
+	/// <summary>
+	/// Manages the relationships between types and the search operators supported by the types.
+	/// </summary>
+	public static class OperatorSupport
 	{
-		public Dictionary<Type, object> Types { get; private set; }
+		public static Dictionary<Type, object> Types { get; private set; }
 
-		public OperatorSupport()
+		static OperatorSupport()
 		{
 			Types = new Dictionary<Type, object>();
 
@@ -42,19 +45,14 @@ namespace Searchable.Operators
 			Types.Add(typeof(ushort?), new object());
 
 			Types.Add(typeof(string), new object());
-
-
 		}
 
-		public object this[Type type]
+		public static object GetSupportedOperators(Type type)
 		{
-			get
-			{
-				if(!Types.ContainsKey(type))
-					throw new ArgumentException(string.Format("The type specified, ({0}) is not supported.", type));
+			if (!Types.ContainsKey(type))
+				throw new ArgumentException(string.Format("The type specified ({0}) is not supported.", type));
 
-				return Types[type];
-			}
+			return Types[type];
 		}
 	}
 }

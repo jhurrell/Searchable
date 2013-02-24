@@ -1,4 +1,5 @@
-﻿namespace SearchableTests
+﻿using System.Collections.Generic;
+namespace SearchableTests
 {
 	public class SampleClass
 	{
@@ -15,7 +16,6 @@
 		public double DoubleProperty { get; set; }
 		public decimal DecimalProperty { get; set; }
 		public char CharProperty { get; set; }
-		public string StringProperty { get; set; }
 		public bool BoolProperty { get; set; }
 
 		// Nullable value types.
@@ -33,7 +33,15 @@
 		public char? NullableCharProperty { get; set; }
 		public bool? NullableBoolProperty { get; set; }
 
+		// Reference types.
+		public string StringProperty { get; set; }
+
+		// Collection types.
+		public IEnumerable<object> ObjectEnumerable { get; set; }
+		public object[] ObjectArray { get; set; }
+
 		// Unsupported types.
 		private string PrivateProperty { get; set; }
+		protected string ProtectedProperty { get; set; }
 	}
 }
