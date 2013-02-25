@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 
 namespace Searchable.Operators
@@ -14,7 +15,7 @@ namespace Searchable.Operators
 		{
 			Types = new Dictionary<Type, object>();
 
-			// Numeric types.
+			// Add support for types.
 			Types.Add(typeof(bool), new object());
 			Types.Add(typeof(byte), new object());
 			Types.Add(typeof(char), new object());
@@ -43,7 +44,6 @@ namespace Searchable.Operators
 			Types.Add(typeof(uint?), new object());
 			Types.Add(typeof(ulong?), new object());
 			Types.Add(typeof(ushort?), new object());
-
 			Types.Add(typeof(string), new object());
 		}
 

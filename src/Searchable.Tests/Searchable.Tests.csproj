@@ -51,12 +51,17 @@
   </Choose>
   <ItemGroup>
     <Compile Include="ConditionTests.cs" />
-    <Compile Include="Operators\OperatorSupportTests.cs" />
+    <Compile Include="OperatorTests\DoesNotHaveValueOperatorTests.cs" />
+    <Compile Include="OperatorTests\EqualToOperatorTests.cs" />
+    <Compile Include="OperatorTests\HasValueOperatorTests.cs" />
+    <Compile Include="OperatorTests\IsTrueOperatorTests.cs" />
+    <Compile Include="OperatorTests\NotEqualToOperatorTests.cs" />
+    <Compile Include="OperatorTests\OperatorSupportTests.cs" />
     <Compile Include="SampleClass.cs" />
     <Compile Include="SearchableTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SearchConditions\IsTrueSearchConditionTests.cs" />
-    <Compile Include="SearchConditions\SearchConditionsTestBase.cs" />
+    <Compile Include="SearchConditionTests\IsTrueSearchConditionTests.cs" />
+    <Compile Include="SearchConditionTests\SearchConditionsTestBase.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Searchable\Searchable.csproj">

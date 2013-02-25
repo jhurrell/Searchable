@@ -1,8 +1,9 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using System;
 using Searchable.Operators;
+using System;
+using System.Collections.Generic;
 
-namespace SearchableTests.Operators
+namespace SearchableTests.OperatorTests
 {
 	[TestClass]
 	public class OperatorSupportTests

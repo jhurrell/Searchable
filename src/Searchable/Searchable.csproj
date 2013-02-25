@@ -39,6 +39,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Operators\BaseOperator.cs" />
+    <Compile Include="Operators\DoesNotHaveValueOperator.cs" />
+    <Compile Include="Operators\EqualToOperator.cs" />
+    <Compile Include="Operators\HasValueOperator.cs" />
+    <Compile Include="Operators\IsTrueOperator.cs" />
+    <Compile Include="Operators\NotEqualToOperator.cs" />
     <Compile Include="Operators\OperatorSupport.cs" />
     <Compile Include="SearchableProperty.cs" />
     <Compile Include="SearchConditions\Condition.cs" />
