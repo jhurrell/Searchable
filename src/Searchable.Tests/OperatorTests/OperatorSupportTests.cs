@@ -2,6 +2,7 @@
 using Searchable.Operators;
 using System;
 using System.Collections.Generic;
+using System.Collections;
 
 namespace SearchableTests.OperatorTests
 {
@@ -190,6 +191,24 @@ namespace SearchableTests.OperatorTests
 			public void NullableUshort()
 			{
 				Assert.IsNotNull(OperatorSupport.GetSupportedOperators(typeof(ushort?)));
+			}
+
+			[TestMethod]
+			public void Array()
+			{
+				Assert.IsNotNull(OperatorSupport.GetSupportedOperators(typeof(Array)));
+			}
+
+			[TestMethod]
+			public void IEnumerable()
+			{
+				Assert.IsNotNull(OperatorSupport.GetSupportedOperators(typeof(IEnumerable)));
+			}
+
+			[TestMethod]
+			public void IEnumerableGeneric()
+			{
+				Assert.IsNotNull(OperatorSupport.GetSupportedOperators(typeof(IEnumerable<object>)));
 			}
 		}
 	}

@@ -2,7 +2,6 @@
 
 namespace Searchable.Operators
 {
-	[Flags]
 	public enum Operators
 	{
 		EqualTo              = 1 << 1,
@@ -29,6 +28,7 @@ namespace Searchable.Operators
 		ContainsOneOf        = 1 << 17,
 		ContainsAllOf        = 1 << 18,
 		ContainsNoneOf       = 1 << 19,
+
 		IsEmpty              = 1 << 20,
 		IsNotEmpty           = 1 << 21,
 		IsOneOf              = 1 << 22,

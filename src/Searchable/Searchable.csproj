@@ -40,10 +40,30 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Operators\BaseOperator.cs" />
+    <Compile Include="Operators\BeginsWithOperator.cs" />
+    <Compile Include="Operators\BetweenOperator.cs" />
+    <Compile Include="Operators\ContainsAllOfOperator.cs" />
+    <Compile Include="Operators\ContainsNoneOfOperator.cs" />
+    <Compile Include="Operators\ContainsOneOfOperator.cs" />
+    <Compile Include="Operators\ContainsOperator.cs" />
+    <Compile Include="Operators\DoesNotBeginWithOperator.cs" />
+    <Compile Include="Operators\DoesNotContainOperator.cs" />
+    <Compile Include="Operators\DoesNotEndWithOperator.cs" />
     <Compile Include="Operators\DoesNotHaveValueOperator.cs" />
+    <Compile Include="Operators\EndsWithOperator.cs" />
     <Compile Include="Operators\EqualToOperator.cs" />
+    <Compile Include="Operators\GreaterThanOperator.cs" />
+    <Compile Include="Operators\GreaterThanOrEqualToOperator.cs" />
     <Compile Include="Operators\HasValueOperator.cs" />
+    <Compile Include="Operators\IsEmptyOperator.cs" />
+    <Compile Include="Operators\IsFalseOperator.cs" />
+    <Compile Include="Operators\IsNotEmptyOperator.cs" />
+    <Compile Include="Operators\IsNotOneOfOperator.cs" />
+    <Compile Include="Operators\IsOneOfOperator.cs" />
     <Compile Include="Operators\IsTrueOperator.cs" />
+    <Compile Include="Operators\LessThanOperator.cs" />
+    <Compile Include="Operators\LessThanOrEqualToOperator.cs" />
+    <Compile Include="Operators\NotBetweenOperator.cs" />
     <Compile Include="Operators\NotEqualToOperator.cs" />
     <Compile Include="Operators\OperatorSupport.cs" />
     <Compile Include="SearchableProperty.cs" />

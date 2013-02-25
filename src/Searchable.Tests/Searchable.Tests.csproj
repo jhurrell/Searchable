@@ -51,10 +51,30 @@
   </Choose>
   <ItemGroup>
     <Compile Include="ConditionTests.cs" />
+    <Compile Include="OperatorTests\BeginsWithOperatorTests.cs" />
+    <Compile Include="OperatorTests\BetweenOperatorTests.cs" />
+    <Compile Include="OperatorTests\ContainsAllOfOperatorTests.cs" />
+    <Compile Include="OperatorTests\ContainsNoneOfOperatorTests.cs" />
+    <Compile Include="OperatorTests\ContainsOneOfOperatorTests.cs" />
+    <Compile Include="OperatorTests\ContainsOperatorTests.cs" />
+    <Compile Include="OperatorTests\DoesNotBeginWithOperatorTests.cs" />
+    <Compile Include="OperatorTests\DoesNotContainOperatorTests.cs" />
+    <Compile Include="OperatorTests\DoesNotEndWithOperatorTests.cs" />
     <Compile Include="OperatorTests\DoesNotHaveValueOperatorTests.cs" />
+    <Compile Include="OperatorTests\EndsWithOperatorTests.cs" />
     <Compile Include="OperatorTests\EqualToOperatorTests.cs" />
+    <Compile Include="OperatorTests\GreaterThanOperatorTests.cs" />
+    <Compile Include="OperatorTests\GreaterThanOrEqualToOperatorTests.cs" />
     <Compile Include="OperatorTests\HasValueOperatorTests.cs" />
+    <Compile Include="OperatorTests\IsEmptyOperatorTests.cs" />
+    <Compile Include="OperatorTests\IsFalseOperatorTests.cs" />
+    <Compile Include="OperatorTests\IsNotEmptyOperatorTests.cs" />
+    <Compile Include="OperatorTests\IsNotOneOfOperatorTests.cs" />
+    <Compile Include="OperatorTests\IsOneOfOperatorTests.cs" />
     <Compile Include="OperatorTests\IsTrueOperatorTests.cs" />
+    <Compile Include="OperatorTests\LessThanOperatorTests.cs" />
+    <Compile Include="OperatorTests\LessThanOrEqualToOperatorTests.cs" />
+    <Compile Include="OperatorTests\NotBetweenOperatorTests.cs" />
     <Compile Include="OperatorTests\NotEqualToOperatorTests.cs" />
     <Compile Include="OperatorTests\OperatorSupportTests.cs" />
     <Compile Include="SampleClass.cs" />
