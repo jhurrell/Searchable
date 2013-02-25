@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Linq;
 using System.Collections;
 using System.Collections.Generic;
 
@@ -10,47 +9,89 @@ namespace Searchable.Operators
 	/// </summary>
 	public static class OperatorSupport
 	{
-		public static Dictionary<Type, object> Types { get; private set; }
+		public static Dictionary<Type, List<BaseOperator>> Types { get; private set; }
 
 		static OperatorSupport()
 		{
-			Types = new Dictionary<Type, object>();
+			// Cache operators by types.
+			var commonOperators = new List<BaseOperator> 
+			{
+				new BetweenOperator(),
+				new NotEqualToOperator(),
+				new DoesNotHaveValueOperator(),
+				new EqualToOperator(),
+				new GreaterThanOperator(),
+				new GreaterThanOrEqualToOperator(),
+				new HasValueOperator(),
+				new IsNotOneOfOperator(),
+				new IsOneOfOperator(),
+				new LessThanOperator(),
+				new LessThanOrEqualToOperator(),
+			};
 
-			// Add support for types.
-			Types.Add(typeof(DateTime), new object());
-			Types.Add(typeof(DateTime?), new object());
-			Types.Add(typeof(bool), new object());
-			Types.Add(typeof(bool?), new object());
-			Types.Add(typeof(byte), new object());
-			Types.Add(typeof(byte?), new object());
-			Types.Add(typeof(char), new object());
-			Types.Add(typeof(char?), new object());
-			Types.Add(typeof(decimal), new object());
-			Types.Add(typeof(decimal?), new object());
-			Types.Add(typeof(double), new object());
-			Types.Add(typeof(double?), new object());
-			Types.Add(typeof(float), new object());
-			Types.Add(typeof(float?), new object());
-			Types.Add(typeof(int), new object());
-			Types.Add(typeof(int?), new object());
-			Types.Add(typeof(long), new object());
-			Types.Add(typeof(long?), new object());
-			Types.Add(typeof(sbyte), new object());
-			Types.Add(typeof(sbyte?), new object());
-			Types.Add(typeof(short), new object());
-			Types.Add(typeof(short?), new object());
-			Types.Add(typeof(uint), new object());
-			Types.Add(typeof(uint?), new object());
-			Types.Add(typeof(ulong), new object());
-			Types.Add(typeof(ulong?), new object());
-			Types.Add(typeof(ushort), new object());
-			Types.Add(typeof(ushort?), new object());
+			var boolOperators = new List<BaseOperator>
+			{
+				new DoesNotHaveValueOperator(),
+				new HasValueOperator(),
+				new IsFalseOperator(),
+				new IsTrueOperator(),
+			};
 
-			Types.Add(typeof(string), new object());
-			Types.Add(typeof(IEnumerable), new object());
+			var stringOperators = new List<BaseOperator>
+			{
+				new BeginsWithOperator(),
+				new ContainsOperator(),
+				new DoesNotContainOperator(),
+				new EndsWithOperator(),
+			};
+			stringOperators.AddRange(commonOperators);
+
+			var collectionOperators = new List<BaseOperator>
+			{
+				new IsEmptyOperator(),
+				new IsNotEmptyOperator(),
+				new ContainsOneOfOperator(),
+				new ContainsNoneOfOperator(),
+				new ContainsAllOfOperator(),
+			};
+
+
+			// Map types to the operators they support.
+			Types = new Dictionary<Type, List<BaseOperator>>();
+			Types.Add(typeof(DateTime), commonOperators);
+			Types.Add(typeof(DateTime?), commonOperators);
+			Types.Add(typeof(bool), boolOperators);
+			Types.Add(typeof(bool?), boolOperators);
+			Types.Add(typeof(byte), commonOperators);
+			Types.Add(typeof(byte?), commonOperators);
+			Types.Add(typeof(char), commonOperators);
+			Types.Add(typeof(char?), commonOperators);
+			Types.Add(typeof(decimal), commonOperators);
+			Types.Add(typeof(decimal?), commonOperators);
+			Types.Add(typeof(double), commonOperators);
+			Types.Add(typeof(double?), commonOperators);
+			Types.Add(typeof(float), commonOperators);
+			Types.Add(typeof(float?), commonOperators);
+			Types.Add(typeof(int), commonOperators);
+			Types.Add(typeof(int?), commonOperators);
+			Types.Add(typeof(long), commonOperators);
+			Types.Add(typeof(long?), commonOperators);
+			Types.Add(typeof(sbyte), commonOperators);
+			Types.Add(typeof(sbyte?), commonOperators);
+			Types.Add(typeof(short), commonOperators);
+			Types.Add(typeof(short?), commonOperators);
+			Types.Add(typeof(uint), commonOperators);
+			Types.Add(typeof(uint?), commonOperators);
+			Types.Add(typeof(ulong), commonOperators);
+			Types.Add(typeof(ulong?), commonOperators);
+			Types.Add(typeof(ushort), commonOperators);
+			Types.Add(typeof(ushort?), commonOperators);
+
+			Types.Add(typeof(string), stringOperators);
+			Types.Add(typeof(IEnumerable), collectionOperators);
 		}
 
-		public static object GetSupportedOperators(Type type)
+		public static List<BaseOperator> GetSupportedOperators(Type type)
 		{
 			if (type != typeof(string) && !type.IsGenericType && typeof(IEnumerable).IsAssignableFrom(type))
 				type = typeof(IEnumerable);
