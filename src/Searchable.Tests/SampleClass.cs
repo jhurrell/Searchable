@@ -1,4 +1,6 @@
 ﻿using System.Collections.Generic;
+using Searchable;
+using Searchable.Operators;
 namespace SearchableTests
 {
 	public class SampleClass
@@ -43,5 +45,21 @@ namespace SearchableTests
 		// Unsupported types.
 		private string PrivateProperty { get; set; }
 		protected string ProtectedProperty { get; set; }
+	}
+
+	public class SearchSampleClass : Searchable<SampleClass>
+	{
+		public SearchSampleClass()
+		{
+			CanSearch(x => x.IntProperty)
+				.Include(CommonOperators.Between);
+
+			CanSearch(x => x.StringProperty)
+				.Include(StringOperators.Contains)
+				.Include(StringOperators.EndsWith)
+				.Include(StringOperators.DoesNotContain)
+				.Exclude(StringOperators.BeginsWith);
+				
+		}
 	}
 }

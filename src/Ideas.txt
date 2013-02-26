@@ -65,3 +65,11 @@ IsNotEmpty                                      X
 ContainsOneOf                                   X
 ContainsNoneOf                                  X
 ContainsAllOf                                   X    
+
+
+
+References:
+http://stackoverflow.com/questions/15099128/dynamically-return-interface-at-design-time
+http://stackoverflow.com/questions/218024/fluent-interfaces-in-c-sharp?rq=1
+http://stackoverflow.com/questions/1464737/hiding-gethashcode-equals-tostring-from-fluent-interface-classes-intellisense-in
+

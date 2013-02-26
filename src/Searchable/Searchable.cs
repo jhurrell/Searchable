@@ -30,9 +30,6 @@ namespace Searchable
 			properties = propertyInfos.ToDictionary(v => v.Name, v => v.Name);
 		}
 
-		/// <summary>
-		/// 
-		/// </summary>
 		public ReadOnlyDictionary<string, string> Properties
 		{
 			get
@@ -41,14 +38,14 @@ namespace Searchable
 			}
 		}
 
-		/// <summary>
-		/// 
-		/// </summary>
-		/// <param name="expression"></param>
-		/// <returns></returns>
-		public object CanSearch(Expression<Func<T, object>> expression)
+		public IStringOperations CanSearch(Expression<Func<T, string>> expression)
 		{
-			return null;
+			return new StringOperations();
+		}
+
+		public ICommonOperations CanSearch(Expression<Func<T, int>> expression)
+		{
+			return new CommonOperations();
 		}
     }
 }
