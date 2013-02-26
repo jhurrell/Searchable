@@ -1,10 +1,10 @@
 ﻿namespace Searchable.Operators
 {
-	public class NotBetweenOperator : BaseOperator
+	public class NotBetweenOperator : Operator
 	{
 		public NotBetweenOperator()
 		{
-			Operator = Operators.NotBetween;
+			OperatorType = Operators.NotBetween;
 			Name = "Not Between";
 			Display = "Not Between";
 			MinValuesRequired = 2;

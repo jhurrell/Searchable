@@ -1,10 +1,10 @@
 ﻿namespace Searchable.Operators
 {
-	public class IsNotOneOfOperator : BaseOperator
+	public class IsNotOneOfOperator : Operator
 	{
 		public IsNotOneOfOperator()
 		{
-			Operator = Operators.IsNotOneOf;
+			OperatorType = Operators.IsNotOneOf;
 			Name = "Is Not One Of";
 			Display = "Is Not One Of";
 			MinValuesRequired = 1;

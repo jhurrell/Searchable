@@ -1,10 +1,10 @@
 ﻿namespace Searchable.Operators
 {
-	public class DoesNotContainOperator : BaseOperator
+	public class DoesNotContainOperator : Operator
 	{
 		public DoesNotContainOperator()
 		{
-			Operator = Operators.DoesNotContain;
+			OperatorType = Operators.DoesNotContain;
 			Name = "Does Not Contain";
 			Display = "Does Not Contain";
 			MinValuesRequired = 1;

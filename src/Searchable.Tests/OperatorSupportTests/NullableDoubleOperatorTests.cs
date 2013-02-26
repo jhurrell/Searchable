@@ -7,7 +7,7 @@ namespace SearchableTests.OperatorSupportTests
 	[TestClass]
 	public class NullableDoubleOperatorTests
 	{
-		protected List<BaseOperator> Operators = OperatorSupport.GetSupportedOperators(typeof(double?));
+		protected List<Operator> Operators = OperatorSupport.GetSupportedOperators(typeof(double?));
 
 		[TestMethod]
 		public void Supports_Between()

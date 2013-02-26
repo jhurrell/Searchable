@@ -1,12 +1,12 @@
 ﻿using System.Collections.Generic;
 using System.Collections.ObjectModel;
-using System.Reflection;
 using System.Linq;
+using System.Reflection;
 
 namespace Searchable
 {
 	/// <summary>
-	/// 
+	/// Initializes a new Searchable class.
 	/// </summary>
 	/// <typeparam name="T"></typeparam>
 	public class Searchable<T>

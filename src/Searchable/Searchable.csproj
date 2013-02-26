@@ -66,11 +66,7 @@
     <Compile Include="Operators\NotBetweenOperator.cs" />
     <Compile Include="Operators\NotEqualToOperator.cs" />
     <Compile Include="Operators\OperatorSupport.cs" />
-    <Compile Include="SearchableProperty.cs" />
-    <Compile Include="SearchConditions\Condition.cs" />
     <Compile Include="Operators\Operators.cs" />
-    <Compile Include="SearchConditions\IsTrueSearchCondition.cs" />
-    <Compile Include="SearchConditions\SearchConditionBase.cs" />
     <Compile Include="Searchable.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

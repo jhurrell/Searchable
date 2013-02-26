@@ -7,7 +7,7 @@ namespace SearchableTests.OperatorSupportTests
 	[TestClass]
 	public class FloatOperatorTests
 	{
-		protected List<BaseOperator> Operators = OperatorSupport.GetSupportedOperators(typeof(float));
+		protected List<Operator> Operators = OperatorSupport.GetSupportedOperators(typeof(float));
 
 		[TestMethod]
 		public void Supports_Between()

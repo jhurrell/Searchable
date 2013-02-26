@@ -20,7 +20,7 @@ namespace SearchableTests.OperatorTests
 			[TestMethod]
 			public void Value()
 			{
-				Assert.AreEqual(Operators.HasValue, target.Operator);
+				Assert.AreEqual(Operators.HasValue, target.OperatorType);
 			}
 		}
 

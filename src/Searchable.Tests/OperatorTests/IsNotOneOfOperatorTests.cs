@@ -20,7 +20,7 @@ namespace SearchableTests.OperatorTests
 			[TestMethod]
 			public void Value()
 			{
-				Assert.AreEqual(Operators.IsNotOneOf, target.Operator);
+				Assert.AreEqual(Operators.IsNotOneOf, target.OperatorType);
 			}
 		}
 

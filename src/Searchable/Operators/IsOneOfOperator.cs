@@ -1,10 +1,10 @@
 ﻿namespace Searchable.Operators
 {
-	public class IsOneOfOperator : BaseOperator
+	public class IsOneOfOperator : Operator
 	{
 		public IsOneOfOperator()
 		{
-			Operator = Operators.IsOneOf;
+			OperatorType = Operators.IsOneOf;
 			Name = "Is One Of";
 			Display = "Is One Of";
 			MinValuesRequired = 1;

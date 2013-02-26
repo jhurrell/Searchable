@@ -1,10 +1,10 @@
 ﻿namespace Searchable.Operators
 {
-	public class ContainsAllOfOperator : BaseOperator
+	public class ContainsAllOfOperator : Operator
 	{
 		public ContainsAllOfOperator()
 		{
-			Operator = Operators.ContainsAllOf;
+			OperatorType = Operators.ContainsAllOf;
 			Name = "Contains All Of";
 			Display = "Contains All Of";
 			MinValuesRequired = 1;

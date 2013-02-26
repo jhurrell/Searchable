@@ -1,10 +1,10 @@
 ﻿namespace Searchable.Operators
 {
-	public class DoesNotEndWithOperator : BaseOperator
+	public class DoesNotEndWithOperator : Operator
 	{
 		public DoesNotEndWithOperator()
 		{
-			Operator = Operators.DoesNotEndWith;
+			OperatorType = Operators.DoesNotEndWith;
 			Name = "Does Not End With";
 			Display = "Does Not End With";
 			MinValuesRequired = 1;

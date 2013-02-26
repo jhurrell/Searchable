@@ -1,10 +1,10 @@
 ﻿namespace Searchable.Operators
 {
-	public class IsTrueOperator : BaseOperator
+	public class IsTrueOperator : Operator
 	{
 		public IsTrueOperator()
 		{
-			Operator = Operators.IsTrue;
+			OperatorType = Operators.IsTrue;
 			Name = "Is True";
 			Display = "True";
 			MinValuesRequired = 0;

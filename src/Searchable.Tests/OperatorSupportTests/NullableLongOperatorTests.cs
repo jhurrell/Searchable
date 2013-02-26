@@ -7,7 +7,7 @@ namespace SearchableTests.OperatorSupportTests
 	[TestClass]
 	public class NullableLongOperatorTests
 	{
-		protected List<BaseOperator> Operators = OperatorSupport.GetSupportedOperators(typeof(long?));
+		protected List<Operator> Operators = OperatorSupport.GetSupportedOperators(typeof(long?));
 
 		[TestMethod]
 		public void Supports_Between()

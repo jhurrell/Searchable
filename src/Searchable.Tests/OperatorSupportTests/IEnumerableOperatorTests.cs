@@ -8,7 +8,7 @@ namespace SearchableTests.OperatorSupportTests
 	[TestClass]
 	public class IEnumerableOperatorTests
 	{
-		protected List<BaseOperator> Operators = OperatorSupport.GetSupportedOperators(typeof(IEnumerable));
+		protected List<Operator> Operators = OperatorSupport.GetSupportedOperators(typeof(IEnumerable));
 
 		[TestMethod]
 		public void Supports_IsEmpty()

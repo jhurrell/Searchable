@@ -7,7 +7,7 @@ namespace SearchableTests.OperatorSupportTests
 	[TestClass]
 	public class SbyteOperatorTests
 	{
-		protected List<BaseOperator> Operators = OperatorSupport.GetSupportedOperators(typeof(sbyte));
+		protected List<Operator> Operators = OperatorSupport.GetSupportedOperators(typeof(sbyte));
 
 		[TestMethod]
 		public void Supports_Between()

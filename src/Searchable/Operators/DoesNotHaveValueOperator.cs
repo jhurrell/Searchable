@@ -1,10 +1,10 @@
 ﻿namespace Searchable.Operators
 {
-	public class DoesNotHaveValueOperator : BaseOperator
+	public class DoesNotHaveValueOperator : Operator
 	{
 		public DoesNotHaveValueOperator()
 		{
-			Operator = Operators.DoesNotHaveValue;
+			OperatorType = Operators.DoesNotHaveValue;
 			Name = "Does Not Have A Value";
 			Display = "= Null";
 			MinValuesRequired = 0;

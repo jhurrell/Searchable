@@ -1,10 +1,10 @@
 ﻿namespace Searchable.Operators
 {
-	public class ContainsNoneOfOperator : BaseOperator
+	public class ContainsNoneOfOperator : Operator
 	{
 		public ContainsNoneOfOperator()
 		{
-			Operator = Operators.ContainsNoneOf;
+			OperatorType = Operators.ContainsNoneOf;
 			Name = "Contains None Of";
 			Display = "Contains None Of";
 			MinValuesRequired = 1;

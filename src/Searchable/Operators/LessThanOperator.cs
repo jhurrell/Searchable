@@ -1,10 +1,10 @@
 ﻿namespace Searchable.Operators
 {
-	public class LessThanOperator : BaseOperator
+	public class LessThanOperator : Operator
 	{
 		public LessThanOperator()
 		{
-			Operator = Operators.LessThan;
+			OperatorType = Operators.LessThan;
 			Name = "Less Than";
 			Display = "<";
 			MinValuesRequired = 1;

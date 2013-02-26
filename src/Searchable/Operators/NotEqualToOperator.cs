@@ -1,10 +1,10 @@
 ﻿namespace Searchable.Operators
 {
-	public class NotEqualToOperator : BaseOperator
+	public class NotEqualToOperator : Operator
 	{
 		public NotEqualToOperator()
 		{
-			Operator = Operators.NotEqualTo;
+			OperatorType = Operators.NotEqualTo;
 			Name = "Not Equal To";
 			Display = "<>";
 			MinValuesRequired = 1;

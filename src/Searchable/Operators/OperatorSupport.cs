@@ -9,12 +9,12 @@ namespace Searchable.Operators
 	/// </summary>
 	public static class OperatorSupport
 	{
-		public static Dictionary<Type, List<BaseOperator>> Types { get; private set; }
+		public static Dictionary<Type, List<Operator>> Types { get; private set; }
 
 		static OperatorSupport()
 		{
 			// Cache operators by types.
-			var commonOperators = new List<BaseOperator> 
+			var commonOperators = new List<Operator> 
 			{
 				new BetweenOperator(),
 				new NotEqualToOperator(),
@@ -29,7 +29,7 @@ namespace Searchable.Operators
 				new LessThanOrEqualToOperator(),
 			};
 
-			var boolOperators = new List<BaseOperator>
+			var boolOperators = new List<Operator>
 			{
 				new DoesNotHaveValueOperator(),
 				new HasValueOperator(),
@@ -37,7 +37,7 @@ namespace Searchable.Operators
 				new IsTrueOperator(),
 			};
 
-			var stringOperators = new List<BaseOperator>
+			var stringOperators = new List<Operator>
 			{
 				new BeginsWithOperator(),
 				new ContainsOperator(),
@@ -46,7 +46,7 @@ namespace Searchable.Operators
 			};
 			stringOperators.AddRange(commonOperators);
 
-			var collectionOperators = new List<BaseOperator>
+			var collectionOperators = new List<Operator>
 			{
 				new IsEmptyOperator(),
 				new IsNotEmptyOperator(),
@@ -57,52 +57,49 @@ namespace Searchable.Operators
 
 
 			// Map types to the operators they support.
-			Types = new Dictionary<Type, List<BaseOperator>>();
+			Types = new Dictionary<Type, List<Operator>>();
 			Types.Add(typeof(DateTime), commonOperators);
-			Types.Add(typeof(DateTime?), commonOperators);
 			Types.Add(typeof(bool), boolOperators);
-			Types.Add(typeof(bool?), boolOperators);
 			Types.Add(typeof(byte), commonOperators);
-			Types.Add(typeof(byte?), commonOperators);
 			Types.Add(typeof(char), commonOperators);
-			Types.Add(typeof(char?), commonOperators);
 			Types.Add(typeof(decimal), commonOperators);
-			Types.Add(typeof(decimal?), commonOperators);
 			Types.Add(typeof(double), commonOperators);
-			Types.Add(typeof(double?), commonOperators);
 			Types.Add(typeof(float), commonOperators);
-			Types.Add(typeof(float?), commonOperators);
 			Types.Add(typeof(int), commonOperators);
-			Types.Add(typeof(int?), commonOperators);
 			Types.Add(typeof(long), commonOperators);
-			Types.Add(typeof(long?), commonOperators);
 			Types.Add(typeof(sbyte), commonOperators);
-			Types.Add(typeof(sbyte?), commonOperators);
 			Types.Add(typeof(short), commonOperators);
-			Types.Add(typeof(short?), commonOperators);
 			Types.Add(typeof(uint), commonOperators);
-			Types.Add(typeof(uint?), commonOperators);
 			Types.Add(typeof(ulong), commonOperators);
-			Types.Add(typeof(ulong?), commonOperators);
 			Types.Add(typeof(ushort), commonOperators);
-			Types.Add(typeof(ushort?), commonOperators);
-
 			Types.Add(typeof(string), stringOperators);
 			Types.Add(typeof(IEnumerable), collectionOperators);
 		}
 
-		public static List<BaseOperator> GetSupportedOperators(Type type)
+		public static List<Operator> GetSupportedOperators(Type type)
 		{
-			if (type != typeof(string) && !type.IsGenericType && typeof(IEnumerable).IsAssignableFrom(type))
-				type = typeof(IEnumerable);
-
-			if (type != typeof(string) && type.IsGenericType && typeof(IEnumerable<>).IsAssignableFrom(type.GetGenericTypeDefinition()))
-				type = typeof(IEnumerable);
-
+			type = GetSupportedType(type);
 			if (!Types.ContainsKey(type))
 				throw new ArgumentException(string.Format("The type specified ({0}) is not supported.", type));
 
 			return Types[type];
+		}
+
+		public static Type GetSupportedType(Type type)
+		{
+			// Determine if the type implements IEnumerable.
+			if (type != typeof(string) && !type.IsGenericType && typeof(IEnumerable).IsAssignableFrom(type))
+				return typeof(IEnumerable);
+
+			// Determine if the type implements IEnumerable<>.
+			if (type != typeof(string) && type.IsGenericType && typeof(IEnumerable<>).IsAssignableFrom(type.GetGenericTypeDefinition()))
+				return typeof(IEnumerable);
+
+			// Determine if the type is Nullable.
+			if (type.IsGenericType && type.GetGenericTypeDefinition() == typeof(Nullable<>))
+				return type.GetGenericArguments()[0];
+
+			return type;
 		}
 	}
 }

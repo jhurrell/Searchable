@@ -1,10 +1,10 @@
 ﻿namespace Searchable.Operators
 {
-	public class DoesNotBeginWithOperator : BaseOperator
+	public class DoesNotBeginWithOperator : Operator
 	{
 		public DoesNotBeginWithOperator()
 		{
-			Operator = Operators.DoesNotBeginWith;
+			OperatorType = Operators.DoesNotBeginWith;
 			Name = "Does Not Begin With";
 			Display = "Does Not Begin With";
 			MinValuesRequired = 1;

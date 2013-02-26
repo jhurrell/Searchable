@@ -1,10 +1,10 @@
 ﻿namespace Searchable.Operators
 {
-	public class EndsWithOperator : BaseOperator
+	public class EndsWithOperator : Operator
 	{
 		public EndsWithOperator()
 		{
-			Operator = Operators.EndsWith;
+			OperatorType = Operators.EndsWith;
 			Name = "Ends With";
 			Display = "Ends With";
 			MinValuesRequired = 1;

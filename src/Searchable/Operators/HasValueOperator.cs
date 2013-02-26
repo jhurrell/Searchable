@@ -1,10 +1,10 @@
 ﻿namespace Searchable.Operators
 {
-	public class HasValueOperator : BaseOperator
+	public class HasValueOperator : Operator
 	{
 		public HasValueOperator()
 		{
-			Operator = Operators.HasValue;
+			OperatorType = Operators.HasValue;
 			Name = "Has A Value";
 			Display = "<> Null";
 			MinValuesRequired = 0;

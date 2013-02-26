@@ -7,7 +7,7 @@ namespace SearchableTests.OperatorSupportTests
 	[TestClass]
 	public class NullableShortOperatorTests
 	{
-		protected List<BaseOperator> Operators = OperatorSupport.GetSupportedOperators(typeof(short?));
+		protected List<Operator> Operators = OperatorSupport.GetSupportedOperators(typeof(short?));
 
 		[TestMethod]
 		public void Supports_Between()

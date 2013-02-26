@@ -8,7 +8,7 @@ namespace SearchableTests.OperatorSupportTests
 	[TestClass]
 	public class NullableDateTimeOperatorTests
 	{
-		protected List<BaseOperator> Operators = OperatorSupport.GetSupportedOperators(typeof(DateTime?));
+		protected List<Operator> Operators = OperatorSupport.GetSupportedOperators(typeof(DateTime?));
 
 		[TestMethod]
 		public void Supports_Between()

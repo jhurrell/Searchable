@@ -7,7 +7,7 @@ namespace SearchableTests.OperatorSupportTests
 	[TestClass]
 	public class NullableDecimalOperatorTests
 	{
-		protected List<BaseOperator> Operators = OperatorSupport.GetSupportedOperators(typeof(decimal?));
+		protected List<Operator> Operators = OperatorSupport.GetSupportedOperators(typeof(decimal?));
 
 		[TestMethod]
 		public void Supports_Between()

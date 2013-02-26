@@ -1,10 +1,10 @@
 ﻿namespace Searchable.Operators
 {
-	public class IsEmptyOperator : BaseOperator
+	public class IsEmptyOperator : Operator
 	{
 		public IsEmptyOperator()
 		{
-			Operator = Operators.IsEmpty;
+			OperatorType = Operators.IsEmpty;
 			Name = "Is Empty";
 			Display = "Is Empty";
 			MinValuesRequired = 0;

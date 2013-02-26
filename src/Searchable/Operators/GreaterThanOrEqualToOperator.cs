@@ -1,10 +1,10 @@
 ﻿namespace Searchable.Operators
 {
-	public class GreaterThanOrEqualToOperator : BaseOperator
+	public class GreaterThanOrEqualToOperator : Operator
 	{
 		public GreaterThanOrEqualToOperator()
 		{
-			Operator = Operators.GreaterThanOrEqualTo;
+			OperatorType = Operators.GreaterThanOrEqualTo;
 			Name = "Greater Than Or Equal To";
 			Display = ">=";
 			MinValuesRequired = 1;

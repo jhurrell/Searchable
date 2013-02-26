@@ -7,7 +7,7 @@ namespace SearchableTests.OperatorSupportTests
 	[TestClass]
 	public class NullableByteOperatorTests
 	{
-		protected List<BaseOperator> Operators = OperatorSupport.GetSupportedOperators(typeof(byte?));
+		protected List<Operator> Operators = OperatorSupport.GetSupportedOperators(typeof(byte?));
 
 		[TestMethod]
 		public void Supports_Between()

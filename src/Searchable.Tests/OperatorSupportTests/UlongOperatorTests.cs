@@ -7,7 +7,7 @@ namespace SearchableTests.OperatorSupportTests
 	[TestClass]
 	public class UlongOperatorTests
 	{
-		protected List<BaseOperator> Operators = OperatorSupport.GetSupportedOperators(typeof(ulong));
+		protected List<Operator> Operators = OperatorSupport.GetSupportedOperators(typeof(ulong));
 
 		[TestMethod]
 		public void Supports_Between()

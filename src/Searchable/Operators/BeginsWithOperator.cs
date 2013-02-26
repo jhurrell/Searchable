@@ -1,10 +1,10 @@
 ﻿namespace Searchable.Operators
 {
-	public class BeginsWithOperator : BaseOperator
+	public class BeginsWithOperator : Operator
 	{
 		public BeginsWithOperator()
 		{
-			Operator = Operators.BeginsWith;
+			OperatorType = Operators.BeginsWith;
 			Name = "Begins With";
 			Display = "Begins With";
 			MinValuesRequired = 1;
