@@ -2,24 +2,28 @@ public class Searchable<Person>
 {
 	public Searchable()
 	{
-		CanSearch(x => x.FirstName);
+		// Supports searching on Name using all available operators.
+		CanSearch(x => x.Name);
 
-		CanSearch(x => x.LastName)
-			.Exclude(Operators.Contains)
-			.Exclude(Operators.EndWith);
+		// Supports searching on SpouseName using all available operators and the
+		// property will display as "Spouse Name".
+		CanSearch(x => x.SpouseName, "Spouse Name");
 
-		CanSearch(x => x.DateOfBirth)
-			.Include(Operators.GreaterThan);
+		// Supports searching on Title using only the EqualTo and NotEqualTo operators.
+		CanSearch(x => x.Title)
+			.Include(StringOperators.EqualTo)
+			.Include(StringOperators.NotEqualTo);
 
-		CanSearch(x => x.SSN)
-			.DisplayAs("Social Security Number");
+		// Supports searching on Age using all operators except for IsOneOf and IsNotOneOf.
+		CanSearch(x => x.Age)
+			.Exclude(NumericOperators.IsOneOf)
+			.Exclude(NumericOperators.IsNotOneOf);
 
-		// If the property being searched is IEnumerable, we can specify a source class
-		// object which can supply a list of selectable values and provide them to the UI.
-		// In this example, ColorSource is a class which implements the ISource interface. 
-		// This interface includes the method called GetSources() which returns IDictionary<string, string>
+		// Supports searching on FavoriteColors collection where the list of q using all operators except for IsOneOf and IsNotOneOf.
 		CanSearch(x => x.FavoriteColors)
-			.Source(ColorSources);
+			.LookupSource(ColorSources)
+			.Include(CollectionOperators.ContainsOneOf)
+			.Include(CollectionOperators.ContainsNoneOf);
 	}
 }
 

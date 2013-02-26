@@ -1,6 +1,8 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Reflection;
 
 namespace Searchable
@@ -28,12 +30,25 @@ namespace Searchable
 			properties = propertyInfos.ToDictionary(v => v.Name, v => v.Name);
 		}
 
+		/// <summary>
+		/// 
+		/// </summary>
 		public ReadOnlyDictionary<string, string> Properties
 		{
 			get
 			{
 				return new ReadOnlyDictionary<string, string>(properties);
 			}
+		}
+
+		/// <summary>
+		/// 
+		/// </summary>
+		/// <param name="expression"></param>
+		/// <returns></returns>
+		public object CanSearch(Expression<Func<T, object>> expression)
+		{
+			return null;
 		}
     }
 }

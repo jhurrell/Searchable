@@ -11,6 +11,9 @@ namespace Searchable.Operators
 	{
 		public static Dictionary<Type, List<Operator>> Types { get; private set; }
 
+		/// <summary>
+		/// Initializes a new static instance of OperatorSupport.
+		/// </summary>
 		static OperatorSupport()
 		{
 			// Cache operators by types.
@@ -76,16 +79,26 @@ namespace Searchable.Operators
 			Types.Add(typeof(IEnumerable), collectionOperators);
 		}
 
+		/// <summary>
+		/// Returns the operators supported for the type.
+		/// </summary>
+		/// <param name="type">Type of object.</param>
+		/// <returns><seealso cref="List<>"/> of <seealso cref="Operator"/></returns>
 		public static List<Operator> GetSupportedOperators(Type type)
 		{
-			type = GetSupportedType(type);
+			type = GetCompatibleType(type);
 			if (!Types.ContainsKey(type))
 				throw new ArgumentException(string.Format("The type specified ({0}) is not supported.", type));
 
 			return Types[type];
 		}
 
-		public static Type GetSupportedType(Type type)
+		/// <summary>
+		/// Returns the compatible type if exists, otherwise the passed type.
+		/// </summary>
+		/// <param name="type">Type ofthe object.</param>
+		/// <returns>Type which is compatible.</returns>
+		public static Type GetCompatibleType(Type type)
 		{
 			// Determine if the type implements IEnumerable.
 			if (type != typeof(string) && !type.IsGenericType && typeof(IEnumerable).IsAssignableFrom(type))
@@ -100,6 +113,17 @@ namespace Searchable.Operators
 				return type.GetGenericArguments()[0];
 
 			return type;
+		}
+
+		/// <summary>
+		/// Determines if the passed type is one supported by the framework.
+		/// </summary>
+		/// <param name="type">Type of object.</param>
+		/// <returns>true is supported, false if not.</returns>
+		public static bool IsTypeSupported(Type type)
+		{
+			type = GetCompatibleType(type);
+			return Types.ContainsKey(type);
 		}
 	}
 }

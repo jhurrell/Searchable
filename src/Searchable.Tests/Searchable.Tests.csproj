@@ -50,36 +50,7 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
-    <Compile Include="OperatorSupportTests\ByteOperatorTests.cs" />
-    <Compile Include="OperatorSupportTests\CharOperatorTests.cs" />
-    <Compile Include="OperatorSupportTests\IEnumerableOperatorTests.cs" />
-    <Compile Include="OperatorSupportTests\StringOperatorTests.cs" />
-    <Compile Include="OperatorSupportTests\NullableBoolOperatorTests.cs" />
-    <Compile Include="OperatorSupportTests\BoolOperatorTests.cs" />
-    <Compile Include="OperatorSupportTests\NullableUshortOperatorTests.cs" />
-    <Compile Include="OperatorSupportTests\UshortOperatorTests.cs" />
-    <Compile Include="OperatorSupportTests\NullableUlongOperatorTests.cs" />
-    <Compile Include="OperatorSupportTests\UlongOperatorTests.cs" />
-    <Compile Include="OperatorSupportTests\NullableUintOperatorTests.cs" />
-    <Compile Include="OperatorSupportTests\UintOperatorTests.cs" />
-    <Compile Include="OperatorSupportTests\NullableShortOperatorTests.cs" />
-    <Compile Include="OperatorSupportTests\ShortOperatorTests.cs" />
-    <Compile Include="OperatorSupportTests\NullableSbyteOperatorTests.cs" />
-    <Compile Include="OperatorSupportTests\SbyteOperatorTests.cs" />
-    <Compile Include="OperatorSupportTests\NullableLongOperatorTests.cs" />
-    <Compile Include="OperatorSupportTests\LongOperatorTests.cs" />
-    <Compile Include="OperatorSupportTests\NullableIntOperatorTests.cs" />
-    <Compile Include="OperatorSupportTests\IntOperatorTests.cs" />
-    <Compile Include="OperatorSupportTests\NullableFloatOperatorTests.cs" />
-    <Compile Include="OperatorSupportTests\FloatOperatorTests.cs" />
-    <Compile Include="OperatorSupportTests\NullableDoubleOperatorTests.cs" />
-    <Compile Include="OperatorSupportTests\DoubleOperatorTests.cs" />
-    <Compile Include="OperatorSupportTests\NullableDecimalOperatorTests.cs" />
-    <Compile Include="OperatorSupportTests\DecimalOperatorTests.cs" />
-    <Compile Include="OperatorSupportTests\NullableCharOperatorTests.cs" />
-    <Compile Include="OperatorSupportTests\NullableByteOperatorTests.cs" />
-    <Compile Include="OperatorSupportTests\NullableDateTimeOperatorTests.cs" />
-    <Compile Include="OperatorSupportTests\DateTimeOperatorTests.cs" />
+    <Compile Include="OperatorSupportTests\GetSupportedOperatorsTests.cs" />
     <Compile Include="OperatorTests\BeginsWithOperatorTests.cs" />
     <Compile Include="OperatorTests\BetweenOperatorTests.cs" />
     <Compile Include="OperatorTests\ContainsAllOfOperatorTests.cs" />
@@ -105,7 +76,6 @@
     <Compile Include="OperatorTests\LessThanOrEqualToOperatorTests.cs" />
     <Compile Include="OperatorTests\NotBetweenOperatorTests.cs" />
     <Compile Include="OperatorTests\NotEqualToOperatorTests.cs" />
-    <Compile Include="OperatorSupportTests\TypesSupportedTests.cs" />
     <Compile Include="SampleClass.cs" />
     <Compile Include="SearchableTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

@@ -39,7 +39,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Operators\BaseOperator.cs" />
+    <Compile Include="Operators\Operator.cs" />
     <Compile Include="Operators\BeginsWithOperator.cs" />
     <Compile Include="Operators\BetweenOperator.cs" />
     <Compile Include="Operators\ContainsAllOfOperator.cs" />
