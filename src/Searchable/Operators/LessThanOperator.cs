@@ -1,4 +1,4 @@
-﻿namespace Searchable.Operators
+﻿namespace SearchBuilder.Operators
 {
 	public class LessThanOperator : Operator
 	{

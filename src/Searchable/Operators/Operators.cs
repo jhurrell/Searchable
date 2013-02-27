@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Searchable.Operators
+namespace SearchBuilder.Operators
 {
 	public enum Operators
 	{

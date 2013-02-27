@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
-using Searchable;
-using Searchable.Operators;
+using SearchBuilder;
+using SearchBuilder.Operators;
 namespace SearchableTests
 {
 	public class SampleClass
@@ -47,7 +47,7 @@ namespace SearchableTests
 		protected string ProtectedProperty { get; set; }
 	}
 
-	public class SearchSampleClass : Searchable<SampleClass>
+	public class SearchSampleClass : SearchBuilder<SampleClass>
 	{
 		public SearchSampleClass()
 		{

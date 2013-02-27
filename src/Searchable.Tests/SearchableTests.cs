@@ -1,5 +1,5 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Searchable;
+using SearchBuilder;
 using System.Collections.ObjectModel;
 using System.Linq;
 using System.Reflection;
@@ -9,12 +9,12 @@ namespace SearchableTests
 	[TestClass]
 	public class SearchableTests
 	{
-		protected Searchable<SampleClass> target { get; set; }
+		protected SearchBuilder<SampleClass> target { get; set; }
 
 		[TestInitialize]
 		public void TestInitialize()
 		{
-			target = new Searchable<SampleClass>();
+			target = new SearchBuilder<SampleClass>();
 		}
 
 		[TestClass]
@@ -35,7 +35,7 @@ namespace SearchableTests
 			[TestMethod]
 			public void Getter_Is_Public()
 			{
-				var propertyInfo = typeof(Searchable<>)
+				var propertyInfo = typeof(SearchBuilder<>)
 					.GetProperties()
 					.Where(p => p.Name == "Properties")
 					.First();

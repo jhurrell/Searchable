@@ -1,6 +1,6 @@
-﻿using Searchable.Operators;
+﻿using SearchBuilder.Operators;
 
-namespace Searchable
+namespace SearchBuilder
 {
 	public interface IOperations
 	{

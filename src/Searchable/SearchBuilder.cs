@@ -5,20 +5,20 @@ using System.Linq;
 using System.Linq.Expressions;
 using System.Reflection;
 
-namespace Searchable
+namespace SearchBuilder
 {
 	/// <summary>
-	/// Initializes a new Searchable class.
+	/// Initializes a new SearchBuilder class.
 	/// </summary>
 	/// <typeparam name="T"></typeparam>
-	public class Searchable<T>
+	public class SearchBuilder<T>
     {
 		private Dictionary<string, string> properties { get; set; }
 
 		/// <summary>
 		/// 
 		/// </summary>
-		public Searchable()
+		public SearchBuilder()
 		{
 			properties = new Dictionary<string, string>();
 

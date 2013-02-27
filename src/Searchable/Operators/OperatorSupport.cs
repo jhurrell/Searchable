@@ -2,7 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 
-namespace Searchable.Operators
+namespace SearchBuilder.Operators
 {
 	/// <summary>
 	/// Manages the relationships between types and the search operators supported by the types.

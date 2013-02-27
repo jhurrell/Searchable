@@ -1,42 +1,66 @@
-// Initializes a new instance of Searchable where all supported property types on the Person
+// Creating a search builder where all supported property types on the Person
 // and all the operators for those types will be available for building search conditions.
-public class Searchable<Person>
+public class SearchBuilder<Person>
 {
-	public Searchable()
+	public SearchBuilder()
 	{
 	}
 }
 
-// Initializes a new instance of Searchable where only the Name property with the EqualTo and
-// BeginsWith operators will be available for building search conditions.
-public class Searchable<Person>
+// TBD
+public class SearchBuilder<Person>
 {
-	public Searchable()
+	public SearchBuilder()
 	{
-		IncludeProperty(x => x.Name)
+		ExcludeOperator<string>(StringOperators.Contains);
+	}
+}
+
+// Creating a search builder for Person but only supporting EqualTo and BeginsWith on the Name
+// property and IsOneOf and IsNotOneOf on the DateOfBirthProperty.
+public class SearchBuilder<Person>
+{
+	public SearchBuilder()
+	{
+		AddProperty(x => x.Name)
 			.WithOperator(StringOperators.EqualTo)
 			.WithOperator(StringOperators.BeginsWith);
+
+		AddProperty(x => x.DateOfBirth)
+			.WithoutOperator(CommonOperators.IsOneOf)
+			.WithoutOperator(CommonOperators.IsNotOneOf);
 	}
 }
 
-// Initializes a new instance of Searchable where all supported property types and all the operators 
-// for those types except for the SSN property will be available for building search conditions.
-public class Searchable<Person>
+// Creating a search builder for Person supporting all properties and all operators but excluding
+// the SSN property.
+public class SearchBuilder<Person>
 {
-	public Searchable()
+	public SearchBuilder()
 	{
-		ExcludeProperty(x => x.SSN);
+		RemoveProperty(x => x.SSN);
 	}
 }
 
-// Initializes a new instance of Searchable where only the Name property with the EqualTo and
-// BeginsWith operators will be available for building search conditions.
-public class Searchable<Person>
+// Creating a search builder for Person supporting all properties and all operators but only 
+// including the EqualTo and BeginsWith operators for the Name property.
+public class SearchBuilder<Person>
 {
-	public Searchable()
+	public SearchBuilder()
 	{
 		ForProperty(x => x.Name)
 			.WithOperator(StringOperators.EqualTo)
 			.WithOperator(StringOperators.BeginsWith);
+	}
+}
+
+// Creating a search builder for Person supporting all properties and all operators and specify
+// a source class implementing ITBD to supply values for the FavoriteColors IEnumerable.
+public class SearchBuilder<Person>
+{
+	public SearchBuilder()
+	{
+		ForProperty(x => x.FavoriteColors)
+			.WithLookupSource(new ColorsList());
 	}
 }
