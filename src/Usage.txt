@@ -1,0 +1,14 @@
+var searchable = new Searchable<Person>();
+
+// The available properties to be searched plus the operators supported are defined in
+// the constructor and are either defaults or those specifically included/excluded
+// at design time.
+IEnumerable<Property> = searchable.Properties;
+IEnumerable<Operators> = searchable["FirstName"].Operators;
+BaseOperator = searchable["FirstName"]["Equals"];
+
+searchable.Conditions = IEnumerable<Condition>
+searchable.AddCondition(string propertyName, string operatorName, params values)
+searchable.AddCondition(string propertyName, string operatorName, object[] values)
+searchable.AddCondition(string propertyName, Operators operator, params values)
+searchable.AddCondition(string propertyName, Operators operator, object[] values)

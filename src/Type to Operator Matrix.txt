@@ -1,0 +1,23 @@
+                        Bol   Num   Dat   Str   Col
+IsTrue                  X
+IsFalse                 X
+HasValue                X     X     X     X  
+DoesNotHaveValue        X     X     X     X
+EqualTo                       X     X     X
+NotEqualTo                    X     X     X
+GreaterThan                   X     X     X
+LessThan                      X     X     X
+GreaterThanOrEqualTo          X     X     X
+LessThanOrEqualTo             X     X     X
+IsOneOf                       X     X     X     
+IsNotOneOf                    X     X     X
+Between                       X     X     X
+BeginsWith                                X
+EndsWith                                  X
+Contains                                  X 
+DoesNotContain                            X
+IsEmpty                                         X
+IsNotEmpty                                      X
+ContainsOneOf                                   X
+ContainsNoneOf                                  X
+ContainsAllOf                                   X    
