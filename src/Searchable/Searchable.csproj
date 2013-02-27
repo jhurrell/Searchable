@@ -67,6 +67,7 @@
     <Compile Include="Operators\NotEqualToOperator.cs" />
     <Compile Include="Operators\OperatorSupport.cs" />
     <Compile Include="Operators\Operators.cs" />
+    <Compile Include="SearchableProperty.cs" />
     <Compile Include="SearchBuilder.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
