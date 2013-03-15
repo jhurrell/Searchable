@@ -1,18 +1,9 @@
-// Creating a search builder where all supported property types on the Person
-// and all the operators for those types will be available for building search conditions.
+// Creating a search builder where all supported property types on the Person and all the operators 
+// for those types will be available for building search conditions.
 public class SearchBuilder<Person>
 {
 	public SearchBuilder()
 	{
-	}
-}
-
-// TBD
-public class SearchBuilder<Person>
-{
-	public SearchBuilder()
-	{
-		ExcludeOperator<string>(StringOperators.Contains);
 	}
 }
 
@@ -62,5 +53,15 @@ public class SearchBuilder<Person>
 	{
 		ForProperty(x => x.FavoriteColors)
 			.WithLookupSource(new ColorsList());
+	}
+}
+
+// Create a search builder where all supported property types on the Person are available for 
+// building search conditions except for the Contains operator which is removed for all string types.
+public class SearchBuilder<Person>
+{
+	public SearchBuilder()
+	{
+		ExcludeOperator<string>(StringOperators.Contains);
 	}
 }

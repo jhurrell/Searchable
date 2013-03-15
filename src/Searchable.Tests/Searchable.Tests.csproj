@@ -50,6 +50,9 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
+    <Compile Include="ConfigurationTests\AddPropertyTests.cs" />
+    <Compile Include="ConfigurationTests\DefaultTests.cs" />
+    <Compile Include="ConfigurationTests\RemovePropertyTests.cs" />
     <Compile Include="OperatorSupportTests\GetSupportedOperatorsTests.cs" />
     <Compile Include="OperatorTests\BeginsWithOperatorTests.cs" />
     <Compile Include="OperatorTests\BetweenOperatorTests.cs" />
@@ -76,6 +79,8 @@
     <Compile Include="OperatorTests\LessThanOrEqualToOperatorTests.cs" />
     <Compile Include="OperatorTests\NotBetweenOperatorTests.cs" />
     <Compile Include="OperatorTests\NotEqualToOperatorTests.cs" />
+    <Compile Include="PropertyTests\DisplayNameTests.cs" />
+    <Compile Include="PropertyTests\NameTests.cs" />
     <Compile Include="SampleClass.cs" />
     <Compile Include="SearchableTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -86,6 +91,7 @@
       <Name>Searchable</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
       <ItemGroup>

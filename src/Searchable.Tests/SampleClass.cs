@@ -1,6 +1,5 @@
 ﻿using System.Collections.Generic;
-using SearchBuilder;
-using SearchBuilder.Operators;
+
 namespace SearchableTests
 {
 	public class SampleClass
@@ -45,5 +44,10 @@ namespace SearchableTests
 		// Unsupported types.
 		private string PrivateProperty { get; set; }
 		protected string ProtectedProperty { get; set; }
+		public Component Component { get; set; }
+	}
+
+	public class Component
+	{
 	}
 }
