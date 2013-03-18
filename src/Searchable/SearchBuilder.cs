@@ -38,7 +38,7 @@ namespace SearchBuilder
 		/// </summary>
 		/// <param name="expression">Expression identifying the property.</param>
 		/// <returns><seealso cref="Property"/> added to the collection.</returns>
-		protected Property AddProperty(Expression<Func<T, object>> expression)
+		protected IProperty AddProperty(Expression<Func<T, object>> expression)
 		{
 			// Change the method by which we identify searchable properties.
 			if (PropertiesDefinedBy != PropertiesDefinedBy.AddProperty)

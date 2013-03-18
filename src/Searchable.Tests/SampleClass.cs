@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
 namespace SearchableTests
 {
@@ -18,6 +19,7 @@ namespace SearchableTests
 		public decimal DecimalProperty { get; set; }
 		public char CharProperty { get; set; }
 		public bool BoolProperty { get; set; }
+		public DateTime DateTimeProperty { get; set; }
 
 		// Nullable value types.
 		public byte? NullableByteProperty { get; set; }
@@ -33,6 +35,7 @@ namespace SearchableTests
 		public decimal? NullableDecimalProperty { get; set; }
 		public char? NullableCharProperty { get; set; }
 		public bool? NullableBoolProperty { get; set; }
+		public DateTime? NullableDateTimeProperty { get; set; }
 
 		// Reference types.
 		public string StringProperty { get; set; }

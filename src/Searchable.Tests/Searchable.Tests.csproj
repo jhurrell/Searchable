@@ -81,6 +81,7 @@
     <Compile Include="OperatorTests\NotEqualToOperatorTests.cs" />
     <Compile Include="PropertyTests\DisplayNameTests.cs" />
     <Compile Include="PropertyTests\NameTests.cs" />
+    <Compile Include="PropertyTests\OperatorTests.cs" />
     <Compile Include="SampleClass.cs" />
     <Compile Include="SearchableTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

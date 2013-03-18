@@ -12,7 +12,7 @@ namespace SearchableTests.ConfigurationTests
 		public void Resets_Collection()
 		{
 			var target = new RemovePropertySingle();
-			Assert.AreEqual(28, target.Properties.Count);
+			Assert.AreEqual(30, target.Properties.Count);
 		}
 
 		[TestMethod]
@@ -33,6 +33,7 @@ namespace SearchableTests.ConfigurationTests
 				"DoubleProperty",
 				"DecimalProperty",
 				"CharProperty",
+				"DateTimeProperty",
 				"NullableByteProperty",
 				"NullableSbtyeProperty",
 				"NullableShortProperty",
@@ -46,6 +47,7 @@ namespace SearchableTests.ConfigurationTests
 				"NullableDecimalProperty",
 				"NullableCharProperty",
 				"NullableBoolProperty",
+				"NullableDateTimeProperty",
 				"StringProperty",
 				"ObjectEnumerable",
 				"ObjectArray",
@@ -72,6 +74,7 @@ namespace SearchableTests.ConfigurationTests
 				"DoubleProperty",
 				"DecimalProperty",
 				"CharProperty",
+				"DateTimeProperty",
 				"NullableByteProperty",
 				"NullableSbtyeProperty",
 				"NullableShortProperty",
@@ -85,6 +88,7 @@ namespace SearchableTests.ConfigurationTests
 				"NullableDecimalProperty",
 				"NullableCharProperty",
 				"NullableBoolProperty",
+				"NullableDateTimeProperty",
 				"StringProperty",
 				"ObjectEnumerable",
 				"ObjectArray",
