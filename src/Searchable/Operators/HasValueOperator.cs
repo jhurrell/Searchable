@@ -1,12 +1,12 @@
 ﻿namespace SearchBuilder.Operators
 {
-	public class HasValueOperator : Operator
+	public class HasValueOperator : OperatorBase
 	{
 		public HasValueOperator()
 		{
-			OperatorType = Operators.HasValue;
-			Name = "Has A Value";
-			Display = "<> Null";
+			OperatorType = Operator.HasValue;
+			Name = "HasAValue";
+			Symbol = "<> Null";
 			MinValuesRequired = 0;
 			MaxValuesRequired = 0;
 		}

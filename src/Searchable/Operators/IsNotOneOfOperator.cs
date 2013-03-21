@@ -1,12 +1,12 @@
 ﻿namespace SearchBuilder.Operators
 {
-	public class IsNotOneOfOperator : Operator
+	public class IsNotOneOfOperator : OperatorBase
 	{
 		public IsNotOneOfOperator()
 		{
-			OperatorType = Operators.IsNotOneOf;
-			Name = "Is Not One Of";
-			Display = "Is Not One Of";
+			OperatorType = Operator.IsNotOneOf;
+			Name = "IsNotOneOf";
+			Symbol = "Is Not One Of";
 			MinValuesRequired = 1;
 			MaxValuesRequired = 1;
 		}

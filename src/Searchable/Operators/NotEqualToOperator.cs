@@ -1,12 +1,12 @@
 ﻿namespace SearchBuilder.Operators
 {
-	public class NotEqualToOperator : Operator
+	public class NotEqualToOperator : OperatorBase
 	{
 		public NotEqualToOperator()
 		{
-			OperatorType = Operators.NotEqualTo;
-			Name = "Not Equal To";
-			Display = "<>";
+			OperatorType = Operator.NotEqualTo;
+			Name = "NotEqualTo";
+			Symbol = "<>";
 			MinValuesRequired = 1;
 			MaxValuesRequired = 1;
 		}

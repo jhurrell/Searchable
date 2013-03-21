@@ -20,7 +20,7 @@ namespace SearchableTests.OperatorTests
 			[TestMethod]
 			public void Value()
 			{
-				Assert.AreEqual(Operators.NotBetween, target.OperatorType);
+				Assert.AreEqual(Operator.NotBetween, target.OperatorType);
 			}
 		}
 
@@ -30,17 +30,27 @@ namespace SearchableTests.OperatorTests
 			[TestMethod]
 			public void Is_Set()
 			{
-				Assert.AreEqual("Not Between", target.Name);
+				Assert.AreEqual("NotBetween", target.Name);
 			}
 		}
 
 		[TestClass]
-		public class DisplayTests : NotBetweenOperatorTests
+		public class DisplayNameTests : NotBetweenOperatorTests
 		{
 			[TestMethod]
 			public void Is_Set()
 			{
-				Assert.AreEqual("Not Between", target.Display);
+				Assert.AreEqual("Not Between", target.DisplayName);
+			}
+		}
+
+		[TestClass]
+		public class SymbolTests : NotBetweenOperatorTests
+		{
+			[TestMethod]
+			public void Is_Set()
+			{
+				Assert.AreEqual("Not Between", target.Symbol);
 			}
 		}
 

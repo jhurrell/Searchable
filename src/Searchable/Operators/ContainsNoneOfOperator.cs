@@ -1,12 +1,12 @@
 ﻿namespace SearchBuilder.Operators
 {
-	public class ContainsNoneOfOperator : Operator
+	public class ContainsNoneOfOperator : OperatorBase
 	{
 		public ContainsNoneOfOperator()
 		{
-			OperatorType = Operators.ContainsNoneOf;
-			Name = "Contains None Of";
-			Display = "Contains None Of";
+			OperatorType = Operator.ContainsNoneOf;
+			Name = "ContainsNoneOf";
+			Symbol = "Contains None Of";
 			MinValuesRequired = 1;
 			MaxValuesRequired = int.MaxValue;
 		}

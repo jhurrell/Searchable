@@ -20,7 +20,7 @@ namespace SearchableTests.OperatorTests
 			[TestMethod]
 			public void Value()
 			{
-				Assert.AreEqual(Operators.LessThan, target.OperatorType);
+				Assert.AreEqual(Operator.LessThan, target.OperatorType);
 			}
 		}
 
@@ -30,17 +30,27 @@ namespace SearchableTests.OperatorTests
 			[TestMethod]
 			public void Is_Set()
 			{
-				Assert.AreEqual("Less Than", target.Name);
+				Assert.AreEqual("LessThan", target.Name);
 			}
 		}
 
 		[TestClass]
-		public class DisplayTests : LessThanOperatorTests
+		public class DisplayNameTests : LessThanOperatorTests
 		{
 			[TestMethod]
 			public void Is_Set()
 			{
-				Assert.AreEqual("<", target.Display);
+				Assert.AreEqual("Less Than", target.DisplayName);
+			}
+		}
+
+		[TestClass]
+		public class SymbolTests : LessThanOperatorTests
+		{
+			[TestMethod]
+			public void Is_Set()
+			{
+				Assert.AreEqual("<", target.Symbol);
 			}
 		}
 

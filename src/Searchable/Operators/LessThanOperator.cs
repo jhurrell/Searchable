@@ -1,12 +1,12 @@
 ﻿namespace SearchBuilder.Operators
 {
-	public class LessThanOperator : Operator
+	public class LessThanOperator : OperatorBase
 	{
 		public LessThanOperator()
 		{
-			OperatorType = Operators.LessThan;
-			Name = "Less Than";
-			Display = "<";
+			OperatorType = Operator.LessThan;
+			Name = "LessThan";
+			Symbol = "<";
 			MinValuesRequired = 1;
 			MaxValuesRequired = 1;
 		}

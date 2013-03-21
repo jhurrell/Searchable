@@ -40,7 +40,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="IProperty.cs" />
-    <Compile Include="Operators\Operator.cs" />
+    <Compile Include="OperatorsDefinedBy.cs" />
+    <Compile Include="Operators\OperatorBase.cs" />
     <Compile Include="Operators\BeginsWithOperator.cs" />
     <Compile Include="Operators\BetweenOperator.cs" />
     <Compile Include="Operators\ContainsAllOfOperator.cs" />
@@ -67,7 +68,7 @@
     <Compile Include="Operators\NotBetweenOperator.cs" />
     <Compile Include="Operators\NotEqualToOperator.cs" />
     <Compile Include="Operators\OperatorSupport.cs" />
-    <Compile Include="Operators\Operators.cs" />
+    <Compile Include="Operators\Operator.cs" />
     <Compile Include="PropertiesDefinedBy.cs" />
     <Compile Include="Property.cs" />
     <Compile Include="SearchBuilder.cs" />

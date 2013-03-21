@@ -1,12 +1,12 @@
 ﻿namespace SearchBuilder.Operators
 {
-	public class DoesNotEndWithOperator : Operator
+	public class DoesNotEndWithOperator : OperatorBase
 	{
 		public DoesNotEndWithOperator()
 		{
-			OperatorType = Operators.DoesNotEndWith;
-			Name = "Does Not End With";
-			Display = "Does Not End With";
+			OperatorType = Operator.DoesNotEndWith;
+			Name = "DoesNotEndWith";
+			Symbol = "Does Not End With";
 			MinValuesRequired = 1;
 			MaxValuesRequired = 1;
 		}

@@ -1,23 +1,23 @@
-﻿using System;
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+using SearchBuilder.Operators;
+using System;
 using System.Collections;
 using System.Collections.Generic;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-using SearchBuilder.Operators;
 
 namespace SearchableTests.OperatorSupportTests
 {
 	[TestClass]
 	public class GetSupportedOperatorsTests
 	{
-		protected List<Operator> booleanOperators { get; set; }
-		protected List<Operator> numericOperators { get; set; }
-		protected List<Operator> stringOperators { get; set; }
-		protected List<Operator> ienumerableOperators { get; set; }
+		protected List<OperatorBase> booleanOperators { get; set; }
+		protected List<OperatorBase> numericOperators { get; set; }
+		protected List<OperatorBase> stringOperators { get; set; }
+		protected List<OperatorBase> ienumerableOperators { get; set; }
 
 		[TestInitialize]
 		public void TestInitialize()
 		{
-			booleanOperators = new List<Operator>
+			booleanOperators = new List<OperatorBase>
 			{
 				new DoesNotHaveValueOperator(),
 				new HasValueOperator(),
@@ -25,7 +25,7 @@ namespace SearchableTests.OperatorSupportTests
 				new IsTrueOperator(),
 			};
 
-			numericOperators = new List<Operator>
+			numericOperators = new List<OperatorBase>
 			{
 				new BetweenOperator(),
 				new DoesNotHaveValueOperator(),
@@ -40,7 +40,7 @@ namespace SearchableTests.OperatorSupportTests
 				new NotEqualToOperator(),
 			};
 
-			stringOperators = new List<Operator>
+			stringOperators = new List<OperatorBase>
 			{
 				new BeginsWithOperator(),
 				new BetweenOperator(),
@@ -59,7 +59,7 @@ namespace SearchableTests.OperatorSupportTests
 				new NotEqualToOperator(),
 			};
 
-			ienumerableOperators = new List<Operator>
+			ienumerableOperators = new List<OperatorBase>
 			{
 				new ContainsAllOfOperator(),
 				new ContainsNoneOfOperator(),
@@ -68,6 +68,14 @@ namespace SearchableTests.OperatorSupportTests
 				new IsNotEmptyOperator(),
 
 			};
+		}
+
+		[TestMethod]
+		public void Does_Not_Return_Reference_To_Collection()
+		{
+			var operators = OperatorSupport.GetSupportedOperators(typeof(string));
+			operators.Clear();
+			CollectionAssert.AreEquivalent(stringOperators, OperatorSupport.GetSupportedOperators(typeof(string)));
 		}
 
 		[TestMethod]

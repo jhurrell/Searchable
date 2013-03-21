@@ -20,7 +20,7 @@ namespace SearchableTests.OperatorTests
 			[TestMethod]
 			public void Value()
 			{
-				Assert.AreEqual(Operators.EndsWith, target.OperatorType);
+				Assert.AreEqual(Operator.EndsWith, target.OperatorType);
 			}
 		}
 
@@ -30,17 +30,27 @@ namespace SearchableTests.OperatorTests
 			[TestMethod]
 			public void Is_Set()
 			{
-				Assert.AreEqual("Ends With", target.Name);
+				Assert.AreEqual("EndsWith", target.Name);
 			}
 		}
 
 		[TestClass]
-		public class DisplayTests : EndsWithOperatorTests
+		public class DisplayNameTests : EndsWithOperatorTests
 		{
 			[TestMethod]
 			public void Is_Set()
 			{
-				Assert.AreEqual("Ends With", target.Display);
+				Assert.AreEqual("Ends With", target.DisplayName);
+			}
+		}
+
+		[TestClass]
+		public class SymbolTests : EndsWithOperatorTests
+		{
+			[TestMethod]
+			public void Is_Set()
+			{
+				Assert.AreEqual("Ends With", target.Symbol);
 			}
 		}
 

@@ -53,7 +53,10 @@
     <Compile Include="ConfigurationTests\AddPropertyTests.cs" />
     <Compile Include="ConfigurationTests\DefaultTests.cs" />
     <Compile Include="ConfigurationTests\RemovePropertyTests.cs" />
+    <Compile Include="OperatorSupportTests\GetCompatibleTypeTests.cs" />
     <Compile Include="OperatorSupportTests\GetSupportedOperatorsTests.cs" />
+    <Compile Include="OperatorSupportTests\IsOperatorSupportedByTypeTests.cs" />
+    <Compile Include="OperatorSupportTests\IsTypeSupportedTests.cs" />
     <Compile Include="OperatorTests\BeginsWithOperatorTests.cs" />
     <Compile Include="OperatorTests\BetweenOperatorTests.cs" />
     <Compile Include="OperatorTests\ContainsAllOfOperatorTests.cs" />
@@ -79,11 +82,15 @@
     <Compile Include="OperatorTests\LessThanOrEqualToOperatorTests.cs" />
     <Compile Include="OperatorTests\NotBetweenOperatorTests.cs" />
     <Compile Include="OperatorTests\NotEqualToOperatorTests.cs" />
+    <Compile Include="OperatorTests\OperatorSupportTests.cs" />
+    <Compile Include="PropertyTests\AddOperatorTests.cs" />
     <Compile Include="PropertyTests\DisplayNameTests.cs" />
+    <Compile Include="PropertyTests\IndexerTests.cs" />
     <Compile Include="PropertyTests\NameTests.cs" />
-    <Compile Include="PropertyTests\OperatorTests.cs" />
+    <Compile Include="PropertyTests\OperatorsTests.cs" />
+    <Compile Include="PropertyTests\RemoveOperatorTests.cs" />
     <Compile Include="SampleClass.cs" />
-    <Compile Include="SearchableTests.cs" />
+    <Compile Include="SearchableTests\IndexerTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

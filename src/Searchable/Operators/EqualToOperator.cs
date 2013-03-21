@@ -1,12 +1,12 @@
 ﻿namespace SearchBuilder.Operators
 {
-	public class EqualToOperator : Operator
+	public class EqualToOperator : OperatorBase
 	{
 		public EqualToOperator()
 		{
-			OperatorType = Operators.EqualTo;
-			Name = "Equal To";
-			Display = "=";
+			OperatorType = Operator.EqualTo;
+			Name = "EqualTo";
+			Symbol = "=";
 			MinValuesRequired = 1;
 			MaxValuesRequired = 1;
 		}

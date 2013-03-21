@@ -1,12 +1,12 @@
 ﻿namespace SearchBuilder.Operators
 {
-	public class NotBetweenOperator : Operator
+	public class NotBetweenOperator : OperatorBase
 	{
 		public NotBetweenOperator()
 		{
-			OperatorType = Operators.NotBetween;
-			Name = "Not Between";
-			Display = "Not Between";
+			OperatorType = Operator.NotBetween;
+			Name = "NotBetween";
+			Symbol = "Not Between";
 			MinValuesRequired = 2;
 			MaxValuesRequired = 2;
 		}

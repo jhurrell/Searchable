@@ -80,9 +80,9 @@ namespace SearchBuilder
 			// Retrieve the propertyInfo for the member specified.
 			var propertyInfo = GetPropertyInfo(typeof(T), expression);
 
-			// Make sure the property has not already been added.
+			// Make sure the property has not already been removed.
 			if (!Properties.Any(p => p.Name == propertyInfo.Name))
-				throw new ArgumentException(string.Format("RemoveProperty already called for member {0}.", propertyInfo.Name));
+				throw new ArgumentException(string.Format("RemoveProperty already called for member {0} or member does not exist as a property of {1}.", propertyInfo.Name, typeof(T).ToString()));
 
 			// Remove from the collection.
 			var property = Properties.Where(p => p.Name == propertyInfo.Name).FirstOrDefault();

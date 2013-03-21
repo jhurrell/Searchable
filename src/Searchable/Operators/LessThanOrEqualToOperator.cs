@@ -1,12 +1,12 @@
 ﻿namespace SearchBuilder.Operators
 {
-	public class LessThanOrEqualToOperator : Operator
+	public class LessThanOrEqualToOperator : OperatorBase
 	{
 		public LessThanOrEqualToOperator()
 		{
-			OperatorType = Operators.LessThanOrEqualTo;
-			Name = "Less Than Or Equal To";
-			Display = "<=";
+			OperatorType = Operator.LessThanOrEqualTo;
+			Name = "LessThanOrEqualTo";
+			Symbol = "<=";
 			MinValuesRequired = 1;
 			MaxValuesRequired = 1;
 		}

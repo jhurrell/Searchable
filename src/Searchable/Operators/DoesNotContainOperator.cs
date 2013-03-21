@@ -1,12 +1,12 @@
 ﻿namespace SearchBuilder.Operators
 {
-	public class DoesNotContainOperator : Operator
+	public class DoesNotContainOperator : OperatorBase
 	{
 		public DoesNotContainOperator()
 		{
-			OperatorType = Operators.DoesNotContain;
-			Name = "Does Not Contain";
-			Display = "Does Not Contain";
+			OperatorType = Operator.DoesNotContain;
+			Name = "DoesNotContain";
+			Symbol = "Does Not Contain";
 			MinValuesRequired = 1;
 			MaxValuesRequired = 1;
 		}

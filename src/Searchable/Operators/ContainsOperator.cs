@@ -1,12 +1,12 @@
 ﻿namespace SearchBuilder.Operators
 {
-	public class ContainsOperator : Operator
+	public class ContainsOperator : OperatorBase
 	{
 		public ContainsOperator()
 		{
-			OperatorType = Operators.Contains;
+			OperatorType = Operator.Contains;
 			Name = "Contains";
-			Display = "Contains";
+			Symbol = "Contains";
 			MinValuesRequired = 1;
 			MaxValuesRequired = 1;
 		}

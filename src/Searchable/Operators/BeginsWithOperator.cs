@@ -1,12 +1,12 @@
 ﻿namespace SearchBuilder.Operators
 {
-	public class BeginsWithOperator : Operator
+	public class BeginsWithOperator : OperatorBase
 	{
 		public BeginsWithOperator()
 		{
-			OperatorType = Operators.BeginsWith;
-			Name = "Begins With";
-			Display = "Begins With";
+			OperatorType = Operator.BeginsWith;
+			Name = "BeginsWith";
+			Symbol = "Begins With";
 			MinValuesRequired = 1;
 			MaxValuesRequired = 1;
 		}

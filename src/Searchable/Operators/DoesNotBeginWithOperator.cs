@@ -1,12 +1,12 @@
 ﻿namespace SearchBuilder.Operators
 {
-	public class DoesNotBeginWithOperator : Operator
+	public class DoesNotBeginWithOperator : OperatorBase
 	{
 		public DoesNotBeginWithOperator()
 		{
-			OperatorType = Operators.DoesNotBeginWith;
-			Name = "Does Not Begin With";
-			Display = "Does Not Begin With";
+			OperatorType = Operator.DoesNotBeginWith;
+			Name = "DoesNotBeginWith";
+			Symbol = "Does Not Begin With";
 			MinValuesRequired = 1;
 			MaxValuesRequired = 1;
 		}

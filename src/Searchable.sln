@@ -6,8 +6,10 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Files", "Solution Files", "{DC7203EA-5C6C-488A-B7E8-4CD9A244E9E3}"
 	ProjectSection(SolutionItems) = preProject
 		Configuration.txt = Configuration.txt
+		Operators Supported.txt = Operators Supported.txt
 		References.txt = References.txt
 		Type to Operator Matrix.txt = Type to Operator Matrix.txt
+		Types Supported.txt = Types Supported.txt
 		Usage.txt = Usage.txt
 	EndProjectSection
 EndProject

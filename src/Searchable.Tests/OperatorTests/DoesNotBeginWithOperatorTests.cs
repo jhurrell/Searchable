@@ -20,7 +20,7 @@ namespace SearchableTests.OperatorTests
 			[TestMethod]
 			public void Value()
 			{
-				Assert.AreEqual(Operators.DoesNotBeginWith, target.OperatorType);
+				Assert.AreEqual(Operator.DoesNotBeginWith, target.OperatorType);
 			}
 		}
 
@@ -30,17 +30,27 @@ namespace SearchableTests.OperatorTests
 			[TestMethod]
 			public void Is_Set()
 			{
-				Assert.AreEqual("Does Not Begin With", target.Name);
+				Assert.AreEqual("DoesNotBeginWith", target.Name);
 			}
 		}
 
 		[TestClass]
-		public class DisplayTests : DoesNotBeginWithOperatorTests
+		public class DisplayNameTests : DoesNotBeginWithOperatorTests
 		{
 			[TestMethod]
 			public void Is_Set()
 			{
-				Assert.AreEqual("Does Not Begin With", target.Display);
+				Assert.AreEqual("Does Not Begin With", target.DisplayName);
+			}
+		}
+
+		[TestClass]
+		public class SymbolTests : DoesNotBeginWithOperatorTests
+		{
+			[TestMethod]
+			public void Is_Set()
+			{
+				Assert.AreEqual("Does Not Begin With", target.Symbol);
 			}
 		}
 

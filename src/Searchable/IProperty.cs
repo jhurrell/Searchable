@@ -1,10 +1,11 @@
-﻿using System;
+﻿using SearchBuilder.Operators;
 
 namespace SearchBuilder
 {
 	public interface IProperty
 	{
 		IProperty DisplayAs(string displayName);
-		IProperty WithOperator(Type op);
+		IProperty AddOperator(Operator op);
+		IProperty RemoveOperator(Operator op);
 	}
 }

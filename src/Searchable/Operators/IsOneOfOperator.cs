@@ -1,12 +1,12 @@
 ﻿namespace SearchBuilder.Operators
 {
-	public class IsOneOfOperator : Operator
+	public class IsOneOfOperator : OperatorBase
 	{
 		public IsOneOfOperator()
 		{
-			OperatorType = Operators.IsOneOf;
-			Name = "Is One Of";
-			Display = "Is One Of";
+			OperatorType = Operator.IsOneOf;
+			Name = "IsOneOf";
+			Symbol = "Is One Of";
 			MinValuesRequired = 1;
 			MaxValuesRequired = 1;
 		}

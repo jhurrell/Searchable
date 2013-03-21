@@ -1,12 +1,12 @@
 ﻿namespace SearchBuilder.Operators
 {
-	public class BetweenOperator : Operator
+	public class BetweenOperator : OperatorBase
 	{
 		public BetweenOperator()
 		{
-			OperatorType = Operators.Between;
+			OperatorType = Operator.Between;
 			Name = "Between";
-			Display = "Between";
+			Symbol = "Between";
 			MinValuesRequired = 2;
 			MaxValuesRequired = 2;
 		}

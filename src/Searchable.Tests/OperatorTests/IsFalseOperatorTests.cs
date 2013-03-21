@@ -20,7 +20,7 @@ namespace SearchableTests.OperatorTests
 			[TestMethod]
 			public void Value()
 			{
-				Assert.AreEqual(Operators.IsFalse, target.OperatorType);
+				Assert.AreEqual(Operator.IsFalse, target.OperatorType);
 			}
 		}
 
@@ -30,17 +30,27 @@ namespace SearchableTests.OperatorTests
 			[TestMethod]
 			public void Is_Set()
 			{
-				Assert.AreEqual("Is False", target.Name);
+				Assert.AreEqual("IsFalse", target.Name);
 			}
 		}
 
 		[TestClass]
-		public class DisplayTests : IsFalseOperatorTests
+		public class DisplayNameTests : IsFalseOperatorTests
 		{
 			[TestMethod]
 			public void Is_Set()
 			{
-				Assert.AreEqual("False", target.Display);
+				Assert.AreEqual("Is False", target.DisplayName);
+			}
+		}
+
+		[TestClass]
+		public class SymbolTests : IsFalseOperatorTests
+		{
+			[TestMethod]
+			public void Is_Set()
+			{
+				Assert.AreEqual("False", target.Symbol);
 			}
 		}
 

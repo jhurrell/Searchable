@@ -1,12 +1,12 @@
 ﻿namespace SearchBuilder.Operators
 {
-	public class GreaterThanOperator : Operator
+	public class GreaterThanOperator : OperatorBase
 	{
 		public GreaterThanOperator()
 		{
-			OperatorType = Operators.GreaterThan;
-			Name = "Greater Than";
-			Display = ">";
+			OperatorType = Operator.GreaterThan;
+			Name = "GreaterThan";
+			Symbol = ">";
 			MinValuesRequired = 1;
 			MaxValuesRequired = 1;
 		}

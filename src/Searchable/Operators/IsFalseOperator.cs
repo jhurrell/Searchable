@@ -1,12 +1,12 @@
 ﻿namespace SearchBuilder.Operators
 {
-	public class IsFalseOperator : Operator
+	public class IsFalseOperator : OperatorBase
 	{
 		public IsFalseOperator()
 		{
-			OperatorType = Operators.IsFalse;
-			Name = "Is False";
-			Display = "False";
+			OperatorType = Operator.IsFalse;
+			Name = "IsFalse";
+			Symbol = "False";
 			MinValuesRequired = 0;
 			MaxValuesRequired = 0;
 		}

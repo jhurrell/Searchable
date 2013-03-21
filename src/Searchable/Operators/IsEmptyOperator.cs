@@ -1,12 +1,12 @@
 ﻿namespace SearchBuilder.Operators
 {
-	public class IsEmptyOperator : Operator
+	public class IsEmptyOperator : OperatorBase
 	{
 		public IsEmptyOperator()
 		{
-			OperatorType = Operators.IsEmpty;
-			Name = "Is Empty";
-			Display = "Is Empty";
+			OperatorType = Operator.IsEmpty;
+			Name = "IsEmpty";
+			Symbol = "Is Empty";
 			MinValuesRequired = 0;
 			MaxValuesRequired = 0;
 		}

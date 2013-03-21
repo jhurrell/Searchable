@@ -1,12 +1,12 @@
 ﻿namespace SearchBuilder.Operators
 {
-	public class EndsWithOperator : Operator
+	public class EndsWithOperator : OperatorBase
 	{
 		public EndsWithOperator()
 		{
-			OperatorType = Operators.EndsWith;
-			Name = "Ends With";
-			Display = "Ends With";
+			OperatorType = Operator.EndsWith;
+			Name = "EndsWith";
+			Symbol = "Ends With";
 			MinValuesRequired = 1;
 			MaxValuesRequired = 1;
 		}

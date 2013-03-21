@@ -20,7 +20,7 @@ namespace SearchableTests.OperatorTests
 			[TestMethod]
 			public void Value()
 			{
-				Assert.AreEqual(Operators.ContainsAllOf, target.OperatorType);
+				Assert.AreEqual(Operator.ContainsAllOf, target.OperatorType);
 			}
 		}
 
@@ -30,17 +30,27 @@ namespace SearchableTests.OperatorTests
 			[TestMethod]
 			public void Is_Set()
 			{
-				Assert.AreEqual("Contains All Of", target.Name);
+				Assert.AreEqual("ContainsAllOf", target.Name);
 			}
 		}
 
 		[TestClass]
-		public class DisplayTests : ContainsAllOfOperatorTests
+		public class DisplayNameTests : ContainsAllOfOperatorTests
 		{
 			[TestMethod]
 			public void Is_Set()
 			{
-				Assert.AreEqual("Contains All Of", target.Display);
+				Assert.AreEqual("Contains All Of", target.DisplayName);
+			}
+		}
+
+		[TestClass]
+		public class SymbolTests : ContainsAllOfOperatorTests
+		{
+			[TestMethod]
+			public void Is_Set()
+			{
+				Assert.AreEqual("Contains All Of", target.Symbol);
 			}
 		}
 

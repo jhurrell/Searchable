@@ -9,13 +9,6 @@ namespace SearchableTests.ConfigurationTests
 	public class RemovePropertyTests
 	{
 		[TestMethod]
-		public void Resets_Collection()
-		{
-			var target = new RemovePropertySingle();
-			Assert.AreEqual(30, target.Properties.Count);
-		}
-
-		[TestMethod]
 		public void Removes_Property_From_Collection()
 		{
 			var target = new RemovePropertySingle();

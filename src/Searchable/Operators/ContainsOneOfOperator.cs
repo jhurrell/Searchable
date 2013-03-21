@@ -1,12 +1,12 @@
 ﻿namespace SearchBuilder.Operators
 {
-	public class ContainsOneOfOperator : Operator
+	public class ContainsOneOfOperator : OperatorBase
 	{
 		public ContainsOneOfOperator()
 		{
-			OperatorType = Operators.ContainsOneOf;
-			Name = "Contains One Of";
-			Display = "Contains One Of";
+			OperatorType = Operator.ContainsOneOf;
+			Name = "ContainsOneOf";
+			Symbol = "Contains One Of";
 			MinValuesRequired = 1;
 			MaxValuesRequired = int.MaxValue;
 		}

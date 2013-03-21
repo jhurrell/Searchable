@@ -14,12 +14,12 @@ public class SearchBuilder<Person>
 	public SearchBuilder()
 	{
 		AddProperty(x => x.Name)
-			.WithOperator(StringOperators.EqualTo)
-			.WithOperator(StringOperators.BeginsWith);
+			.AddOperator(StringOperators.EqualTo)
+			.AddOperator(StringOperators.BeginsWith);
 
 		AddProperty(x => x.DateOfBirth)
-			.WithoutOperator(CommonOperators.IsOneOf)
-			.WithoutOperator(CommonOperators.IsNotOneOf);
+			.RemoveOperator(CommonOperators.IsOneOf)
+			.RemoveOperator(CommonOperators.IsNotOneOf);
 	}
 }
 
@@ -34,14 +34,14 @@ public class SearchBuilder<Person>
 }
 
 // Creating a search builder for Person supporting all properties and all operators but only 
-// including the EqualTo and BeginsWith operators for the Name property.
+// including the EqualTo and BeginsWith o perators for the Name property.
 public class SearchBuilder<Person>
 {
 	public SearchBuilder()
 	{
 		ForProperty(x => x.Name)
-			.WithOperator(StringOperators.EqualTo)
-			.WithOperator(StringOperators.BeginsWith);
+			.AddOperator(StringOperators.EqualTo)
+			.AddOperator(StringOperators.BeginsWith);
 	}
 }
 

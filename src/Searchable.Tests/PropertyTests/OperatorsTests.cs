@@ -4,7 +4,7 @@ using SearchBuilder;
 namespace SearchableTests.PropertyTests
 {
 	[TestClass]
-	public class OperatorTests
+	public class OperatorsTests
 	{
 		protected PropertyOperators target { get; set; }
 
@@ -18,12 +18,6 @@ namespace SearchableTests.PropertyTests
 		public void Collection_Populated()
 		{
 			Assert.IsTrue(target["StringProperty"].Operators.Count > 0);
-		}
-
-		[TestMethod]
-		public void WithOperator_Only_Includes_Specified_Operators()
-		{
-			
 		}
 	}
 
