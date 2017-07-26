@@ -1,14 +1,57 @@
-var searchBuilder = new SearchBuilder<Person>();
+Assume we have a Person class and we want to provide a UI for users to create custom searches against Persons.
 
-// The available properties to be searched plus the operators supported are defined in
-// the constructor and are either defaults or those specifically included/excluded
-// at design time.
-IEnumerable<Property> = searchBuilder.Properties;
-IEnumerable<Operators> = searchBuilder["FirstName"].Operators;
-BaseOperator = searchBuilder["FirstName"]["Equals"];
+	public class Person
+	{
+		public string FirstName { get; set; }
+		public string LastName { get; set; }
+		public DateTime? DateOfBirth { get; set; }
+	}
 
-searchBuilder.Conditions = IEnumerable<Condition>
-searchBuilder.AddCondition(string propertyName, string operatorName, params values)
-searchBuilder.AddCondition(string propertyName, string operatorName, object[] values)
-searchBuilder.AddCondition(string propertyName, Operators operator, params values)
-searchBuilder.AddCondition(string propertyName, Operators operator, object[] values)
+We would implement SearchBuilder as follows:
+
+	public class PersonSearcher : SearchBuilder<Person>
+	{
+	}
+
+By default, all the supported types on Person will be available in a UI for a user to select.
+
+What if we only want to expose searches on the FirstName and LastName. We could do this:
+
+	public class PersonSearcher : SearchBuilder<Person>
+	{
+		public void PersonSearcher()
+		{
+			CanSearch(p => p.FirstName);
+			CanSearch(p => p.LastName);
+		}
+	}
+
+Or this:
+
+	public class PersonSearcher : SearchBuilder<Person>
+	{
+		public void PersonSearcher()
+		{
+			CannotSearch(p => p.DateOfBirth);
+		}
+	}
+
+If this example both solutions are functionally equivalent.
+
+
+How do I decide which method to use?
+
+* Use the default if you want all the supported properties and operators to be available for selection in a search UI.
+* Use CanSearch() if the number of properties you want to support are fewer than the properties you do not want to support.
+* Use CannotSearch() if the number of properties you want to support is greater than the properties you do not want to support.
+
+var builder = new PersonSearcher();
+
+// Get all supported Properties.
+var supportedProperties = builder.Properties;
+
+// Get all supported operators for a specific Property.
+var supportedOperators = builder.Properties["PropertyName"].Operators;
+
+builder.Conditions.Add(new Condition(propertyName, operatorName, values[]));
+var definedConditions = builder.Conditions;

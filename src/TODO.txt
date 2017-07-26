@@ -1,0 +1,5 @@
+- Interfaces for SearchBuilder 
+	- CanSearch()
+	- CannotSearch()
+
+

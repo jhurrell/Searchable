@@ -1,0 +1,31 @@
+// Numeric types
+byte
+int
+long
+sbyte
+int
+ushort
+uint
+ulong
+float
+double
+decimal
+char
+bool
+DateTime
+
+// Nullable numeric types
+byte?
+int?
+long?
+sbyte?
+int?
+ushort?
+uint?
+ulong?
+float?
+double?
+decimal?
+char?
+bool?
+DateTime?

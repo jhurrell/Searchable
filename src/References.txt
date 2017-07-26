@@ -7,3 +7,9 @@ http://liviutrifoi.wordpress.com/2009/02/16/fluent-interfaces-constraints-at-com
 http://andrevianna.com/blog/index.php/2010/08/guidelines-to-fluent-interface-design-in-c-part-1/
 http://andrevianna.com/blog/index.php/2010/08/guidelines-to-fluent-interface-design-in-c-part-2/
 http://andrevianna.com/blog/index.php/2010/08/guidelines-to-fluent-interface-design-in-c-part-3/
+
+Hiding Object methods from Intellisense.
+http://blogs.clariusconsulting.net/kzu/how-to-hide-system-object-members-from-your-interfaces/
+
+Used in defining the default name of a property.
+http://stackoverflow.com/questions/9964467/create-space-between-capital-letters-and-skip-space-between-consecutive
